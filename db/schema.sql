@@ -7,6 +7,6 @@ CREATE TABLE wings
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(255) NOT NULL,
-	hungry BOOLEAN DEFAULT false,
+	hungry INTEGER DEFAULT 0,
 	PRIMARY KEY (id)
 );

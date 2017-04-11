@@ -3,12 +3,12 @@ var mysql = require("mysql");
 
 var connection;
 
-if (process.env.CLEARDB_URL) {
+if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection({
-    host: 'us-cdbr-iron-east-03.cleardb.net',
-    user: 'b5c06e7c9887c5',
-    password: '1e809df3',
-    database: 'heroku_6b0bbc304e5f86f'
+    host: 'wvulqmhjj9tbtc1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'dlm4rgt37q308ite',
+    password: 'dayuxqnae55nyfwy',
+    database: 'wgbgjjdudztlge8l'
   });
 } else {
   connection = mysql.createConnection({
@@ -22,13 +22,13 @@ if (process.env.CLEARDB_URL) {
 
 // Make connection.
 
-  connection.connect(function (err) {
-    if (err) {
-      console.error("error connecting: " + err.stack);
-      setTimeout(connection.connect);
-      return;
-    }
-  });
+connection.connect(function (err) {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    setTimeout(connection.connect);
+    return;
+  }
+});
 
 
 
